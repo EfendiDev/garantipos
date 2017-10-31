@@ -324,7 +324,7 @@ class GarantiPos
         $HashData               = strtoupper(sha1($this->terminalID.$params['orderid'].$params['txnamount'].$params['successurl'].$params['errorurl'].$params['txntype'].$params['txninstallmentcount'].$this->storeKey.$SecurityData));
         $params['secure3dhash'] = $HashData;
 
-        /* @todo: sipariş adresleri yönlendirme formuna eklenecek
+        /* @todo: Sipariş adresleri yönlendirme formuna eklenecek
          * Siparişe yönelik Fatura bilgilerini göndermek için ekteki opsiyonel alanlar kullanılabilir.
          * Eğer birden çok Fatura detayı gönderilecekse orderaddresscount=2 yapılarak
          * Tüm element isimlerindeki 1 rakamı 2 yapılmalıdır. Örn; orderaddresscity2 gibi...*/
