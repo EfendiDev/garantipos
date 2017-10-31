@@ -23,7 +23,7 @@ class GarantiPos
     public  $successUrl         = "?action=success"; //Ödeme işlemi başarılı olduğunda yönlenecek sayfa
     public  $errorUrl           = "?action=error"; //Ödeme başarısız olduğunda yönlecenek sayfa
 
-    private $paymentRefreshTime               = "0"; //ödeme alındıktan bekletilecek süre
+    private $paymentRefreshTime               = "0"; //Ödeme alındıktan bekletilecek süre
     private $timeOutPeriod                    = "60";
     private $addCampaignInstallment           = "N";
     private $totalInstallamentCount           = "0";
@@ -56,7 +56,7 @@ class GarantiPos
         $this->orderNo          = $params['orderNo']; //Her işlemde farklı bir değer gönderilmeli
         $this->amount           = $params['amount']*100; //İşlem Tutarı 1.00 TL için 100 gönderilmeli
         $this->installmentCount = $params['installmentCount']; //Taksit sayısı. Boş gönderilirse taksit yapılmaz
-        $this->currencyCode     = "949"; //default döviz kodu; TRY = 949
+        $this->currencyCode     = "949"; //Default döviz kodu; TRY = 949
         $this->customerIP       = $params['customerIP'];
         $this->customerEmail    = $params['customerEmail'];
         $this->cardName         = $params['cardName'];
@@ -95,8 +95,8 @@ class GarantiPos
                 "txnsubtype"            => "sales",
                 "lang"                  => "tr",
                 "garantipay"            => "Y",
-                "bnsuseflag"            => "Y", //bonus kullanımı Y/N
-                "fbbuseflag"            => "Y", //fbb kullanımı Y/N
+                "bnsuseflag"            => "Y", //Bonus kullanımı Y/N
+                "fbbuseflag"            => "Y", //Fbb kullanımı Y/N
                 "chequeuseflag"         => "Y", //Y/N
                 "mileuseflag"           => "Y", //Y/N
             ];
